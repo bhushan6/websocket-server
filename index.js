@@ -8,6 +8,10 @@ const aWss = expressWs.getWss('/');
 app.use( express.static( 'public' ) );
 
 
+app.use("/", (req, res) => {
+  res.json({message: "HELLO"})
+})
+
 
 const clients = [];
 const room = new Array( 255 );
