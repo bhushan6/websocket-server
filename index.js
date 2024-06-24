@@ -86,6 +86,7 @@ function broadcast(ws, data) {
 }
 
 app.use("/", (req, res) => {
+  console.log("on home route")
   res.json({message: "HELLO"})
 })
 
