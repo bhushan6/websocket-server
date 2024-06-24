@@ -85,6 +85,10 @@ function broadcast(ws, data) {
   }
 }
 
+app.use("/", (req, res) => {
+  res.json({message: "HELLO"})
+})
+
 app.ws("/", function (ws, request) {
   ws.on("close", function () {
     remove(ws);
